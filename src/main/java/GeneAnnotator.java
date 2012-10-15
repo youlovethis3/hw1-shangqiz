@@ -58,7 +58,7 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
 		  Sentence sentence=(Sentence) it.next();
 		  String tmpsentencecontext=sentence.getSentence_Context();
 		  Map<Integer, Integer> tmpMap;
-		  tmpMap=nameentityrecognizer.getGeneSpans(tmpsentencecontext);
+		  tmpMap=nameentityrecognizer.getGeneSpans(tmpsentencecontext); 
 		  Iterator mapit=tmpMap.entrySet().iterator();
 		  while(mapit.hasNext()){
 			  Entry<Integer, Integer> entry = (Entry<Integer, Integer>) mapit.next();
