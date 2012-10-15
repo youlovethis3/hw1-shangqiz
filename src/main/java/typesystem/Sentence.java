@@ -15,7 +15,7 @@ import org.apache.uima.jcas.cas.StringArray;
 
 
 /** 
- * Updated by JCasGen Mon Oct 15 15:32:40 CST 2012
+ * Updated by JCasGen Mon Oct 15 22:53:38 CST 2012
  * XML source: E:/workspaceCMUZSQ/hw1-shangqiz/src/main/resources/descripter/aeDescriptor.xml
  * @generated */
 public class Sentence extends Annotation {

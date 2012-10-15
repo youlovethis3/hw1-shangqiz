@@ -65,7 +65,7 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
 			  String str=tmpsentencecontext.substring(entry.getKey(), entry.getValue());
 			 
 			  typesystemGeneEntity annotation = new typesystemGeneEntity(aJCas);
-			  if(myhashset.hs.contains(str)){
+		/*	  if(myhashset.hs.contains(str)){
 					 int currentconfidence=annotation.getConfidence();
 					 currentconfidence++;
 					 annotation.setConfidence(currentconfidence);
@@ -75,7 +75,7 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
 					 int currentconfidence=annotation.getConfidence();
 					 currentconfidence++;
 					 annotation.setConfidence(currentconfidence);
-				 }
+				 }*/
 			  annotation.setTheSentenceID(sentence.getSentence_ID());
 			  annotation.setEntity(str);
 			  annotation.setStart(entry.getKey());
