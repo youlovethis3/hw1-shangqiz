@@ -44,10 +44,10 @@ public class ConfidenceAnnotator extends JCasAnnotator_ImplBase {
    */
   public void process(JCas aJCas) {
 	  JCas jcas=aJCas;
-	  FSIterator it = jcas.getAnnotationIndex(typesystemGeneEntity.type).iterator();
+	  Iterator itt = jcas.getAnnotationIndex(typesystemGeneEntity.type).iterator();
 	  GeneEntityFilter myhashset=new GeneEntityFilter();
-	  while(it.hasNext()){
-		  typesystemGeneEntity Entity=(typesystemGeneEntity) it.next();
+	  while(itt.hasNext()){
+		  typesystemGeneEntity Entity=(typesystemGeneEntity) itt.next();
 		  String str=Entity.getEntity();
 			 //Corresponding to genenames.txt
 			  if(myhashset.hs.contains(str)){
