@@ -46,7 +46,7 @@ public class ConfidenceAnnotator extends JCasAnnotator_ImplBase {
 	  JCas jcas=aJCas;
 	  Iterator itt = jcas.getAnnotationIndex(typesystemGeneEntity.type).iterator();
 	  GeneEntityFilter myhashset=new GeneEntityFilter();
-	  while(itt.hasNext()){
+	  while(itt.hasNext()){ 
 		  typesystemGeneEntity Entity=(typesystemGeneEntity) itt.next();
 		  String str=Entity.getEntity();
 			 //Corresponding to genenames.txt
