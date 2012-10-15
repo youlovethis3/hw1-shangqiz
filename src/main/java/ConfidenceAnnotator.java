@@ -29,7 +29,7 @@ import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.jcas.cas.StringList;
-import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.resource.ResourceInitializationException; 
 
 import typesystem.Sentence;
 import typesystem.typesystemGeneEntity;
