@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Oct 15 22:53:39 CST 2012
+ * Updated by JCasGen Tue Oct 16 02:19:35 CST 2012
  * @generated */
 public class typesystemGeneEntity_Type extends Annotation_Type {
   /** @generated */
@@ -133,6 +133,24 @@ public class typesystemGeneEntity_Type extends Annotation_Type {
     ll_cas.ll_setIntValue(addr, casFeatCode_Confidence, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_Confidence_lingpipe;
+  /** @generated */
+  final int     casFeatCode_Confidence_lingpipe;
+  /** @generated */ 
+  public double getConfidence_lingpipe(int addr) {
+        if (featOkTst && casFeat_Confidence_lingpipe == null)
+      jcas.throwFeatMissing("Confidence_lingpipe", "typesystem.typesystemGeneEntity");
+    return ll_cas.ll_getDoubleValue(addr, casFeatCode_Confidence_lingpipe);
+  }
+  /** @generated */    
+  public void setConfidence_lingpipe(int addr, double v) {
+        if (featOkTst && casFeat_Confidence_lingpipe == null)
+      jcas.throwFeatMissing("Confidence_lingpipe", "typesystem.typesystemGeneEntity");
+    ll_cas.ll_setDoubleValue(addr, casFeatCode_Confidence_lingpipe, v);}
+    
+  
 
 
 
@@ -161,6 +179,10 @@ public class typesystemGeneEntity_Type extends Annotation_Type {
  
     casFeat_Confidence = jcas.getRequiredFeatureDE(casType, "Confidence", "uima.cas.Integer", featOkTst);
     casFeatCode_Confidence  = (null == casFeat_Confidence) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_Confidence).getCode();
+
+ 
+    casFeat_Confidence_lingpipe = jcas.getRequiredFeatureDE(casType, "Confidence_lingpipe", "uima.cas.Double", featOkTst);
+    casFeatCode_Confidence_lingpipe  = (null == casFeat_Confidence_lingpipe) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_Confidence_lingpipe).getCode();
 
   }
 }

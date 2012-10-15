@@ -3,6 +3,9 @@
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>false</primitive>
   <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="LingPipeDescriptor">
+      <import location="LingPipeDescriptor.xml"/>
+    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="ConfidenceAnnotatorDescripter">
       <import location="ConfidenceAnnotatorDescripter.xml"/>
     </delegateAnalysisEngine>
@@ -24,6 +27,7 @@
       <fixedFlow>
         <node>SentenceFetcherAnnotatorDescriptor</node>
         <node>GeneAnnotatorDescriptor</node>
+        <node>LingPipeDescriptor</node>
         <node>ConfidenceAnnotatorDescripter</node>
       </fixedFlow>
     </flowConstraints>

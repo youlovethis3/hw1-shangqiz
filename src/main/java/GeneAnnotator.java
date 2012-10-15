@@ -18,6 +18,7 @@
  */
 
 
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -38,6 +39,7 @@ import typesystem.typesystemGeneEntity;
  * Example annotator that detects room numbers using Java 1.4 regular expressions.
  */
 public class GeneAnnotator extends JCasAnnotator_ImplBase {
+	public static HashSet<String> hs_after_POS=new HashSet();
 
   /**
    * @see JCasAnnotator_ImplBase#process(JCas)
@@ -80,6 +82,7 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
 			  annotation.setEntity(str);
 			  annotation.setStart(entry.getKey());
 			  annotation.setEnd(entry.getValue());
+			  hs_after_POS.add(str);
 			  annotation.addToIndexes();
 			  
 		  }

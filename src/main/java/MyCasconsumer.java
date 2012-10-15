@@ -145,7 +145,8 @@ public class MyCasconsumer extends CasConsumer_ImplBase implements CasObjectProc
       // System.out.println( annot.getType().getName() + " "+aText);
       
       try {
-    	  	  if(annot.getConfidence()>=1){
+    	  //Combine the two kinds of confidence feature pre-defined to filter the data for output
+    	  	  if((annot.getConfidence()>=1)||(annot.getConfidence_lingpipe()>0.6)){
     		  fileWriter.write(annot.getTheSentenceID()+"|"+annot.getStart()+" "+annot.getEnd()+"|"+annot.getEntity()+"\n");
     		  fileWriter.flush();}
     //	  }
@@ -156,6 +157,8 @@ public class MyCasconsumer extends CasConsumer_ImplBase implements CasObjectProc
         throw new ResourceProcessException(e);
       }
     }
+    
+    
   }
 
   /**

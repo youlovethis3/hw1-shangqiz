@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Oct 15 22:53:39 CST 2012
+ * Updated by JCasGen Tue Oct 16 02:19:35 CST 2012
  * XML source: E:/workspaceCMUZSQ/hw1-shangqiz/src/main/resources/descripter/aeDescriptor.xml
  * @generated */
 public class typesystemGeneEntity extends Annotation {
@@ -150,6 +150,24 @@ public class typesystemGeneEntity extends Annotation {
     if (typesystemGeneEntity_Type.featOkTst && ((typesystemGeneEntity_Type)jcasType).casFeat_Confidence == null)
       jcasType.jcas.throwFeatMissing("Confidence", "typesystem.typesystemGeneEntity");
     jcasType.ll_cas.ll_setIntValue(addr, ((typesystemGeneEntity_Type)jcasType).casFeatCode_Confidence, v);}    
+   
+    
+  //*--------------*
+  //* Feature: Confidence_lingpipe
+
+  /** getter for Confidence_lingpipe - gets 
+   * @generated */
+  public double getConfidence_lingpipe() {
+    if (typesystemGeneEntity_Type.featOkTst && ((typesystemGeneEntity_Type)jcasType).casFeat_Confidence_lingpipe == null)
+      jcasType.jcas.throwFeatMissing("Confidence_lingpipe", "typesystem.typesystemGeneEntity");
+    return jcasType.ll_cas.ll_getDoubleValue(addr, ((typesystemGeneEntity_Type)jcasType).casFeatCode_Confidence_lingpipe);}
+    
+  /** setter for Confidence_lingpipe - sets  
+   * @generated */
+  public void setConfidence_lingpipe(double v) {
+    if (typesystemGeneEntity_Type.featOkTst && ((typesystemGeneEntity_Type)jcasType).casFeat_Confidence_lingpipe == null)
+      jcasType.jcas.throwFeatMissing("Confidence_lingpipe", "typesystem.typesystemGeneEntity");
+    jcasType.ll_cas.ll_setDoubleValue(addr, ((typesystemGeneEntity_Type)jcasType).casFeatCode_Confidence_lingpipe, v);}    
   }
 
     

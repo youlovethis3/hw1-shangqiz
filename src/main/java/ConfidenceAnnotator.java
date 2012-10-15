@@ -61,7 +61,7 @@ public class ConfidenceAnnotator extends JCasAnnotator_ImplBase {
 					 currentconfidence++;
 					 Entity.setConfidence(currentconfidence);
 				 }
-			  Entity.addToIndexes();
+	
 			  
 		  }
 	  }
