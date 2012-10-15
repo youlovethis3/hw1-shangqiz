@@ -42,7 +42,7 @@ public class ConfidenceAnnotator extends JCasAnnotator_ImplBase {
   /**
    * @see JCasAnnotator_ImplBase#process(JCas)
    */
-  public void process(JCas aJCas) {
+  public void process(JCas aJCas) { 
 	  JCas jcas=aJCas;
 	  Iterator itt = jcas.getAnnotationIndex(typesystemGeneEntity.type).iterator();
 	  GeneEntityFilter myhashset=new GeneEntityFilter();
