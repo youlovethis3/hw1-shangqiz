@@ -149,7 +149,7 @@ public class MyCasconsumer extends CasConsumer_ImplBase implements CasObjectProc
     	  	  if((annot.getConfidence()>=1)||(annot.getConfidence_lingpipe()>0.6)){
     		  fileWriter.write(annot.getTheSentenceID()+"|"+annot.getStart()+" "+annot.getEnd()+"|"+annot.getEntity()+"\n");
     		  fileWriter.flush();}
-    //	  }
+    //	  } 
   
         //fileWriter.write(annot.getType().getName() + " " + aText + "\n");
       //  fileWriter.flush();
