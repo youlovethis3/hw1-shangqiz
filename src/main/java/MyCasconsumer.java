@@ -124,13 +124,7 @@ public class MyCasconsumer extends CasConsumer_ImplBase implements CasObjectProc
 
     // iterate and print annotations
     Iterator annotationIter = jcas.getAnnotationIndex(typesystemGeneEntity.type).iterator();
-    GeneEntityFilter myhashset=new GeneEntityFilter();
-    System.out.println(myhashset.hs.size());
-    System.out.println(myhashset.hs.size());
-    System.out.println(myhashset.hs.size());
-    
-    System.out.println(myhashset.hs.size());
-    System.out.println(myhashset.hs.size());
+  // GeneEntityFilter myhashset=new GeneEntityFilter();
     
     while (annotationIter.hasNext()) {
     	typesystemGeneEntity annot = (typesystemGeneEntity) annotationIter.next();
@@ -149,13 +143,15 @@ public class MyCasconsumer extends CasConsumer_ImplBase implements CasObjectProc
       aText = aText.replace('\n', ' ');
       aText = aText.replace('\r', ' ');
       // System.out.println( annot.getType().getName() + " "+aText);
+      
       try {
-    	  if(myhashset.hs.contains(annot.getEntity())){
-    		  fileWriter.write(annot.getTheSentenceID()+"|"+annot.getBegin()+" "+annot.getEnd()+"|"+annot.getEntity()+"\n");
-    	  }
+    	  	  if(annot.getConfidence()>=1){
+    		  fileWriter.write(annot.getTheSentenceID()+"|"+annot.getStart()+" "+annot.getEnd()+"|"+annot.getEntity()+"\n");
+    		  fileWriter.flush();}
+    //	  }
   
         //fileWriter.write(annot.getType().getName() + " " + aText + "\n");
-        fileWriter.flush();
+      //  fileWriter.flush();
       } catch (IOException e) {
         throw new ResourceProcessException(e);
       }

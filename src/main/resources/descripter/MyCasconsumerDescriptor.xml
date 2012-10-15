@@ -19,7 +19,7 @@
       <nameValuePair>
         <name>outputFile</name>
         <value>
-          <string>temp-uima-output\annotprint\zsq.txt</string>
+          <string>temp-uima-output\shangqiz_output.txt</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

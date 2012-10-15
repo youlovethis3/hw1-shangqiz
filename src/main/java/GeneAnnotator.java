@@ -44,6 +44,7 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
    */
   public void process(JCas aJCas) {
 	  PosTagNamedEntityRecognizer nameentityrecognizer = null;
+	  GeneEntityFilter myhashset=new GeneEntityFilter();
 	try {
 		nameentityrecognizer = new PosTagNamedEntityRecognizer();
 	} catch (ResourceInitializationException e) {
@@ -52,6 +53,7 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
 	}
 	  JCas jcas=aJCas;
 	  FSIterator it = jcas.getAnnotationIndex(Sentence.type).iterator();
+	  
 	  while(it.hasNext()){
 		  Sentence sentence=(Sentence) it.next();
 		  String tmpsentencecontext=sentence.getSentence_Context();
@@ -61,13 +63,25 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
 		  while(mapit.hasNext()){
 			  Entry<Integer, Integer> entry = (Entry<Integer, Integer>) mapit.next();
 			  String str=tmpsentencecontext.substring(entry.getKey(), entry.getValue());
-			 // System.out.println(str);
+			 
 			  typesystemGeneEntity annotation = new typesystemGeneEntity(aJCas);
+			  if(myhashset.hs.contains(str)){
+					 int currentconfidence=annotation.getConfidence();
+					 currentconfidence++;
+					 annotation.setConfidence(currentconfidence);
+				 }
+			//Corresponding to ontology_def.obo.txt
+			  if(myhashset.hs_ontology.contains(str)){
+					 int currentconfidence=annotation.getConfidence();
+					 currentconfidence++;
+					 annotation.setConfidence(currentconfidence);
+				 }
 			  annotation.setTheSentenceID(sentence.getSentence_ID());
 			  annotation.setEntity(str);
-			  annotation.setBegin(entry.getKey());
+			  annotation.setStart(entry.getKey());
 			  annotation.setEnd(entry.getValue());
 			  annotation.addToIndexes();
+			  
 		  }
 	  }
 	  

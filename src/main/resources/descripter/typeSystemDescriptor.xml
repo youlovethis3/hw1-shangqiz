@@ -20,16 +20,6 @@
           <description/>
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
-        <featureDescription>
-          <name>GeneArray</name>
-          <description/>
-          <rangeTypeName>uima.cas.StringArray</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>GeneList</name>
-          <description/>
-          <rangeTypeName>uima.cas.StringList</rangeTypeName>
-        </featureDescription>
       </features>
     </typeDescription>
   </types>

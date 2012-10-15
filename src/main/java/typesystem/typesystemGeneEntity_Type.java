@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Oct 15 05:24:48 CST 2012
+ * Updated by JCasGen Mon Oct 15 15:32:40 CST 2012
  * @generated */
 public class typesystemGeneEntity_Type extends Annotation_Type {
   /** @generated */
@@ -115,6 +115,24 @@ public class typesystemGeneEntity_Type extends Annotation_Type {
     ll_cas.ll_setIntValue(addr, casFeatCode_End, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_Confidence;
+  /** @generated */
+  final int     casFeatCode_Confidence;
+  /** @generated */ 
+  public int getConfidence(int addr) {
+        if (featOkTst && casFeat_Confidence == null)
+      jcas.throwFeatMissing("Confidence", "typesystem.typesystemGeneEntity");
+    return ll_cas.ll_getIntValue(addr, casFeatCode_Confidence);
+  }
+  /** @generated */    
+  public void setConfidence(int addr, int v) {
+        if (featOkTst && casFeat_Confidence == null)
+      jcas.throwFeatMissing("Confidence", "typesystem.typesystemGeneEntity");
+    ll_cas.ll_setIntValue(addr, casFeatCode_Confidence, v);}
+    
+  
 
 
 
@@ -139,6 +157,10 @@ public class typesystemGeneEntity_Type extends Annotation_Type {
  
     casFeat_End = jcas.getRequiredFeatureDE(casType, "End", "uima.cas.Integer", featOkTst);
     casFeatCode_End  = (null == casFeat_End) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_End).getCode();
+
+ 
+    casFeat_Confidence = jcas.getRequiredFeatureDE(casType, "Confidence", "uima.cas.Integer", featOkTst);
+    casFeatCode_Confidence  = (null == casFeat_Confidence) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_Confidence).getCode();
 
   }
 }

@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Oct 15 05:24:48 CST 2012
+ * Updated by JCasGen Mon Oct 15 15:32:40 CST 2012
  * @generated */
 public class Sentence_Type extends Annotation_Type {
   /** @generated */
@@ -79,61 +79,6 @@ public class Sentence_Type extends Annotation_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_Sentence_Context, v);}
     
   
- 
-  /** @generated */
-  final Feature casFeat_GeneArray;
-  /** @generated */
-  final int     casFeatCode_GeneArray;
-  /** @generated */ 
-  public int getGeneArray(int addr) {
-        if (featOkTst && casFeat_GeneArray == null)
-      jcas.throwFeatMissing("GeneArray", "typesystem.Sentence");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_GeneArray);
-  }
-  /** @generated */    
-  public void setGeneArray(int addr, int v) {
-        if (featOkTst && casFeat_GeneArray == null)
-      jcas.throwFeatMissing("GeneArray", "typesystem.Sentence");
-    ll_cas.ll_setRefValue(addr, casFeatCode_GeneArray, v);}
-    
-   /** @generated */
-  public String getGeneArray(int addr, int i) {
-        if (featOkTst && casFeat_GeneArray == null)
-      jcas.throwFeatMissing("GeneArray", "typesystem.Sentence");
-    if (lowLevelTypeChecks)
-      return ll_cas.ll_getStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_GeneArray), i, true);
-    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_GeneArray), i);
-  return ll_cas.ll_getStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_GeneArray), i);
-  }
-   
-  /** @generated */ 
-  public void setGeneArray(int addr, int i, String v) {
-        if (featOkTst && casFeat_GeneArray == null)
-      jcas.throwFeatMissing("GeneArray", "typesystem.Sentence");
-    if (lowLevelTypeChecks)
-      ll_cas.ll_setStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_GeneArray), i, v, true);
-    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_GeneArray), i);
-    ll_cas.ll_setStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_GeneArray), i, v);
-  }
- 
- 
-  /** @generated */
-  final Feature casFeat_GeneList;
-  /** @generated */
-  final int     casFeatCode_GeneList;
-  /** @generated */ 
-  public int getGeneList(int addr) {
-        if (featOkTst && casFeat_GeneList == null)
-      jcas.throwFeatMissing("GeneList", "typesystem.Sentence");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_GeneList);
-  }
-  /** @generated */    
-  public void setGeneList(int addr, int v) {
-        if (featOkTst && casFeat_GeneList == null)
-      jcas.throwFeatMissing("GeneList", "typesystem.Sentence");
-    ll_cas.ll_setRefValue(addr, casFeatCode_GeneList, v);}
-    
-  
 
 
 
@@ -150,14 +95,6 @@ public class Sentence_Type extends Annotation_Type {
  
     casFeat_Sentence_Context = jcas.getRequiredFeatureDE(casType, "Sentence_Context", "uima.cas.String", featOkTst);
     casFeatCode_Sentence_Context  = (null == casFeat_Sentence_Context) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_Sentence_Context).getCode();
-
- 
-    casFeat_GeneArray = jcas.getRequiredFeatureDE(casType, "GeneArray", "uima.cas.StringArray", featOkTst);
-    casFeatCode_GeneArray  = (null == casFeat_GeneArray) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_GeneArray).getCode();
-
- 
-    casFeat_GeneList = jcas.getRequiredFeatureDE(casType, "GeneList", "uima.cas.StringList", featOkTst);
-    casFeatCode_GeneList  = (null == casFeat_GeneList) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_GeneList).getCode();
 
   }
 }

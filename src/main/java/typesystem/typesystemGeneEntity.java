@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Oct 15 05:24:48 CST 2012
- * XML source: E:/workspaceCMUZSQ/hw1-shangqiz/src/main/resources/descripter/AnalysisEngineDescriptor.xml
+ * Updated by JCasGen Mon Oct 15 15:32:40 CST 2012
+ * XML source: E:/workspaceCMUZSQ/hw1-shangqiz/src/main/resources/descripter/aeDescriptor.xml
  * @generated */
 public class typesystemGeneEntity extends Annotation {
   /** @generated
@@ -132,6 +132,24 @@ public class typesystemGeneEntity extends Annotation {
     if (typesystemGeneEntity_Type.featOkTst && ((typesystemGeneEntity_Type)jcasType).casFeat_End == null)
       jcasType.jcas.throwFeatMissing("End", "typesystem.typesystemGeneEntity");
     jcasType.ll_cas.ll_setIntValue(addr, ((typesystemGeneEntity_Type)jcasType).casFeatCode_End, v);}    
+   
+    
+  //*--------------*
+  //* Feature: Confidence
+
+  /** getter for Confidence - gets 
+   * @generated */
+  public int getConfidence() {
+    if (typesystemGeneEntity_Type.featOkTst && ((typesystemGeneEntity_Type)jcasType).casFeat_Confidence == null)
+      jcasType.jcas.throwFeatMissing("Confidence", "typesystem.typesystemGeneEntity");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((typesystemGeneEntity_Type)jcasType).casFeatCode_Confidence);}
+    
+  /** setter for Confidence - sets  
+   * @generated */
+  public void setConfidence(int v) {
+    if (typesystemGeneEntity_Type.featOkTst && ((typesystemGeneEntity_Type)jcasType).casFeat_Confidence == null)
+      jcasType.jcas.throwFeatMissing("Confidence", "typesystem.typesystemGeneEntity");
+    jcasType.ll_cas.ll_setIntValue(addr, ((typesystemGeneEntity_Type)jcasType).casFeatCode_Confidence, v);}    
   }
 
     

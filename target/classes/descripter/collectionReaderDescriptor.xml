@@ -15,12 +15,24 @@ The Input is the file route which would be used.</description>
         <multiValued>false</multiValued>
         <mandatory>true</mandatory>
       </configurationParameter>
+      <configurationParameter> 
+        <name>BackgroundKnowledgeFile_1</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
     </configurationParameters>
     <configurationParameterSettings>
       <nameValuePair>
         <name>InputDirectory</name>
         <value>
           <string>src/main/resources/data/sample.in</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>BackgroundKnowledgeFile_1</name>
+        <value>
+          <string>src/main/resources/data/genenames.txt</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

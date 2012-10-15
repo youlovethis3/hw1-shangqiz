@@ -52,6 +52,8 @@ public class FileSystemCollectionReader extends CollectionReader_ImplBase {
    * files.
    */
   public static final String PARAM_INPUTDIR = "InputDirectory";
+  public static final String BACKGROUNDKNOWLEDGE_1="src/main/resources/data/genenames.txt";
+  
 
   /**
    * Name of configuration parameter that contains the character encoding used by the input files.
@@ -86,6 +88,7 @@ public class FileSystemCollectionReader extends CollectionReader_ImplBase {
    */
   public void initialize() throws ResourceInitializationException {
     File file = new File(((String) getConfigParameterValue(PARAM_INPUTDIR)).trim());
+    
     mEncoding  = (String) getConfigParameterValue(PARAM_ENCODING);
     mLanguage  = (String) getConfigParameterValue(PARAM_LANGUAGE);
     mRecursive = (Boolean) getConfigParameterValue(PARAM_SUBDIR);
