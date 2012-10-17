@@ -26,8 +26,16 @@ import org.apache.uima.jcas.JCas;
 
 import typesystem.Sentence;
 
+
 /**
- * Example annotator that detects room numbers using Java 1.4 regular expressions.
+ * This is the first annotator used in AnalysisEngine.
+ * Its function is to identify each sentence in the whole simple.in
+ * and store it into the Sentence Typesystem.
+ * Doing the pre-work for future analysis.
+ * 
+ * 
+ * @author youlovethis
+ *
  */
 public class SentenceFetcherAnnotator extends JCasAnnotator_ImplBase {
   private Pattern Sentence = Pattern.compile("([^ ]*)[ ](.*)[\n]");

@@ -40,8 +40,15 @@ import com.aliasi.util.AbstractExternalizable;
 import typesystem.Sentence;
 import typesystem.typesystemGeneEntity;
 
+
 /**
- * Example annotator that detects room numbers using Java 1.4 regular expressions.
+ * This class uses lingpipe as another method for data selection.
+ * Fetch the words defined in typesystemGeneEntity, and giving each
+ * word a feature: confidence_lingpipe from final consuming
+ * 
+ * 
+ * @author youlovethis
+ *
  */
 public class LingPipeAnnotator extends JCasAnnotator_ImplBase {
 

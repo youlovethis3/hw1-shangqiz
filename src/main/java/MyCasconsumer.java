@@ -39,21 +39,18 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceProcessException;
 import org.apache.uima.util.ProcessTrace;
 
-/**
- * An example of CAS Consumer. <br>
- * AnnotationPrinter prints to an output file all annotations in the CAS. <br>
- * Parameters needed by the AnnotationPrinter are
- * <ol>
- * <li> "outputFile" : file to which the output files should be written.</li>
- * </ol>
- * <br>
- * These parameters are set in the initialize method to the values specified in the descriptor file.
- * <br>
- * These may also be set by the application by using the setConfigParameterValue methods.
- * 
- * 
- */
 
+
+/**
+ * This is a CASConsumer integrated in UIMA Framework.
+ * Each word in typesystemGeneEntity is fetched, and its features: 
+ * confidence & confidence_lingpipe are checked for output.
+ * Only the candidates whose confidence>1 and confidence_lingpipe>0.6
+ * can be printed in output file
+ * 
+ * @author youlovethis
+ *
+ */
 public class MyCasconsumer extends CasConsumer_ImplBase implements CasObjectProcessor {
   File outFile;
 

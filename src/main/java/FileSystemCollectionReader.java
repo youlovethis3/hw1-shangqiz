@@ -35,16 +35,12 @@ import org.apache.uima.util.FileUtils;
 import org.apache.uima.util.Progress;
 import org.apache.uima.util.ProgressImpl;
 
+
 /**
- * A simple collection reader that reads documents from a file location in the filesystem. It can be
- * configured with the following parameters:
- * <ul>
- * <li><code>InputFile</code> - path to a file</li>
- * <li><code>Encoding</code> (optional) - character encoding of the input files</li>
- * <li><code>Language</code> (optional) - language of the input documents</li>
- * </ul>
- * 
- * 
+ * This class reads in simple.in as input file and all the name entity files which relates to Biology and Gene.
+ * Store the file into Jcas
+ * @author youlovethis
+ *
  */
 public class FileSystemCollectionReader extends CollectionReader_ImplBase {
   /**

@@ -35,8 +35,12 @@ import org.apache.uima.resource.ResourceInitializationException;
 import typesystem.Sentence;
 import typesystem.typesystemGeneEntity;
 
+
 /**
- * Example annotator that detects room numbers using Java 1.4 regular expressions.
+ * This class uses Sentence as typesystem, identify words from each sentence, stored as typesystemGeneEntiy
+ * (the second typesystem defined). And filtered by POSTagger as a pre-process.
+ * @author youlovethis
+ *
  */
 public class GeneAnnotator extends JCasAnnotator_ImplBase {
 	public static HashSet<String> hs_after_POS=new HashSet();

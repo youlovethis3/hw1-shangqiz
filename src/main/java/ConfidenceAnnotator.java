@@ -37,6 +37,13 @@ import typesystem.typesystemGeneEntity;
 /**
  * Example annotator that detects room numbers using Java 1.4 regular expressions.
  */
+/**
+ * This class is an annotator integrated in UIMA. The class reads each Entity from typesystem,
+ * add an feature named: confidence after using some name entity files for filtering.
+ *
+ * @author youlovethis
+ *
+ */
 public class ConfidenceAnnotator extends JCasAnnotator_ImplBase {
 
   /**

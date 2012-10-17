@@ -5,6 +5,15 @@ import java.io.IOException;
 import java.util.HashSet;
 
 
+
+
+/**
+ * This class performs as a supportive class, define two Hashset<string> 
+ * to score identifed candidates from annotators, and quick search for cancel overlap
+ * produced by several different kinds of filtering.
+ * @author youlovethis
+ *
+ */
 public class GeneEntityFilter {
 	/*Initialization, in it the datafile "genenames.txt" would be read in.
 	 * All nameEntities are stored in the hashset.*/
