@@ -15,7 +15,7 @@ The Input is the file route which would be used.</description>
         <multiValued>false</multiValued>
         <mandatory>true</mandatory>
       </configurationParameter>
-      <configurationParameter> 
+      <configurationParameter>
         <name>BackgroundKnowledgeFile_1</name>
         <type>String</type>
         <multiValued>false</multiValued>
@@ -26,7 +26,7 @@ The Input is the file route which would be used.</description>
       <nameValuePair>
         <name>InputDirectory</name>
         <value>
-          <string>src/main/resources/data/sample.in</string>
+          <string>src/main/resources/data/hw1.in</string>
         </value>
       </nameValuePair>
       <nameValuePair>

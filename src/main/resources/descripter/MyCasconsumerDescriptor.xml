@@ -19,7 +19,7 @@
       <nameValuePair>
         <name>outputFile</name>
         <value>
-          <string>temp-uima-output\shangqiz_output.txt</string>
+          <string>src/main/resources/data/hw1-shangqiz.out</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

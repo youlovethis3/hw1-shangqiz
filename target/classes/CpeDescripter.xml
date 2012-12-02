@@ -3,14 +3,22 @@
     <collectionReader>
         <collectionIterator>
             <descriptor>
-                <import location="collectionReaderDescriptor.xml"/>
+                <import location="descripter/collectionReaderDescriptor.xml"/>
             </descriptor>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>InputPath</name>
+                    <value>
+                        <string>//hw1.in</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
         </collectionIterator>
     </collectionReader>
     <casProcessors casPoolSize="3" processingUnitThreadCount="1">
         <casProcessor deployment="integrated" name="AnalyzeEngine">
             <descriptor>
-                <import location="aeDescriptor.xml"/> 
+                <import location="descripter/aeDescriptor.xml"/> 
             </descriptor>
             <deploymentParameters/>
             <errorHandling>
@@ -22,7 +30,7 @@
         </casProcessor>
         <casProcessor deployment="integrated" name="MyCasconsumerDescriptor">
             <descriptor>
-                <import location="MyCasconsumerDescriptor.xml"/>
+                <import location="descripter/MyCasconsumerDescriptor.xml"/>
             </descriptor>
             <deploymentParameters/>
             <errorHandling>
