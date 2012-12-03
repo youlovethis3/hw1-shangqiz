@@ -26,13 +26,13 @@ The Input is the file route which would be used.</description>
       <nameValuePair>
         <name>InputDirectory</name>
         <value>
-          <string>src/main/resources/data/hw1.in</string>
+          <string>data/hw1.in</string>
         </value>
       </nameValuePair>
       <nameValuePair>
         <name>BackgroundKnowledgeFile_1</name>
         <value>
-          <string>src/main/resources/data/genenames.txt</string>
+          <string>data/genenames.txt</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

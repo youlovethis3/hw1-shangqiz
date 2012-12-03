@@ -19,7 +19,7 @@
       <nameValuePair>
         <name>outputFile</name>
         <value>
-          <string>src/main/resources/data/hw1-shangqiz.out</string>
+          <string>hw1-shangqiz.out</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>
