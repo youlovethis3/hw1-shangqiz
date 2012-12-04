@@ -59,7 +59,7 @@ public class LingPipeAnnotator extends JCasAnnotator_ImplBase {
 	  
 	  JCas jcas=aJCas;
 	  Iterator itt = jcas.getAnnotationIndex(Sentence.type).iterator();
-	  File modelfile=new File("src/main/resources/data/ne-en-bio-genetag.HmmChunker");
+	  File modelfile=new File("data/ne-en-bio-genetag.HmmChunker");
 	  ConfidenceChunker chunker = null;
 	  try {
 			chunker = (ConfidenceChunker) AbstractExternalizable.readObject(modelfile);

@@ -48,7 +48,7 @@ public class FileSystemCollectionReader extends CollectionReader_ImplBase {
    * files.
    */
   public static final String PARAM_INPUTDIR = "InputDirectory";
-  public static final String BACKGROUNDKNOWLEDGE_1="src/main/resources/data/genenames.txt";
+  public static final String BACKGROUNDKNOWLEDGE_1="data/genenames.txt";
   
 
   /**

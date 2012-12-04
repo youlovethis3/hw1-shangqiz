@@ -23,7 +23,7 @@ public class GeneEntityFilter {
 		hs_ontology=new HashSet<String>();
 		
 		  File file = new File(FileSystemCollectionReader.BACKGROUNDKNOWLEDGE_1);
-		  File file_ontology =new File("src/main/resources/data/ontology_def.obo.txt");
+		  File file_ontology =new File("data/ontology_def.obo.txt");
 	        BufferedReader reader = null;
 	        try {
 	            reader = new BufferedReader(new FileReader(file));
