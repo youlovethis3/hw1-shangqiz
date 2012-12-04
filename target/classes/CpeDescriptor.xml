@@ -32,6 +32,14 @@
             <descriptor>
                 <import location="descripter/MyCasconsumerDescriptor.xml"/>
             </descriptor>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>outputFile</name>
+                    <value>
+                        <string>data/hw1-shangqiz.out</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
             <deploymentParameters/>
             <errorHandling>
                 <errorRateThreshold action="terminate" value="0/1000"/>

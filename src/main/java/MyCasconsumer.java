@@ -127,7 +127,7 @@ public class MyCasconsumer extends CasConsumer_ImplBase implements CasObjectProc
     	typesystemGeneEntity annot = (typesystemGeneEntity) annotationIter.next();
       if (titleP == false) {
         try {
-          fileWriter.write("\n\n<++++Let's have some FUN++++>\n");
+          fileWriter.write("");
           if (docUri != null)
             fileWriter.write("DOCUMENT URI:" + docUri + "\n");
         } catch (IOException e) {
