@@ -7,7 +7,7 @@
             </descriptor>
             <configurationParameterSettings>
                 <nameValuePair>
-                    <name>InputPath</name>
+                    <name>InputDirectory</name>
                     <value>
                         <string>hw1.in</string>
                     </value>
