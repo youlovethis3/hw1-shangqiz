@@ -26,7 +26,7 @@ The Input is the file route which would be used.</description>
       <nameValuePair>
         <name>InputDirectory</name>
         <value>
-          <string>data/hw1.in</string>
+          <string>hw1.in</string>
         </value>
       </nameValuePair>
       <nameValuePair>

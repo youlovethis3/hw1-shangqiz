@@ -19,7 +19,7 @@
       <nameValuePair>
         <name>outputFile</name>
         <value>
-          <string>data/hw1-shangqiz.out</string>
+          <string>data/hw1-shangqiz.out.useless</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

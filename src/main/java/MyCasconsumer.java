@@ -53,8 +53,10 @@ import org.apache.uima.util.ProcessTrace;
  */
 public class MyCasconsumer extends CasConsumer_ImplBase implements CasObjectProcessor {
   File outFile;
+  File shangqingfile;
 
   FileWriter fileWriter;
+  FileWriter shangqingfileWriter;
 
   public MyCasconsumer() {
   }
@@ -88,6 +90,16 @@ public class MyCasconsumer extends CasConsumer_ImplBase implements CasObjectProc
     } catch (IOException e) {
       throw new ResourceInitializationException(e);
     }
+    shangqingfile =new File("hw1-shangqiz.out");
+    
+    try {
+		shangqingfileWriter=new FileWriter(shangqingfile);
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+    
+    
   }
 
   /**
@@ -144,8 +156,10 @@ public class MyCasconsumer extends CasConsumer_ImplBase implements CasObjectProc
       try {
     	  //Combine the two kinds of confidence feature pre-defined to filter the data for output
     	  	  if((annot.getConfidence()>=1)||(annot.getConfidence_lingpipe()>0.6)){
-    		  fileWriter.write(annot.getTheSentenceID()+"|"+annot.getStart()+" "+annot.getEnd()+"|"+annot.getEntity()+"\n");
-    		  fileWriter.flush();}
+    		//  fileWriter.write(annot.getTheSentenceID()+"|"+annot.getStart()+" "+annot.getEnd()+"|"+annot.getEntity()+"\n");
+    		  shangqingfileWriter.write(annot.getTheSentenceID()+"|"+annot.getStart()+" "+annot.getEnd()+"|"+annot.getEntity()+"\n");
+    		//  fileWriter.flush();
+    		  }
     //	  } 
   
         //fileWriter.write(annot.getType().getName() + " " + aText + "\n");
@@ -154,7 +168,12 @@ public class MyCasconsumer extends CasConsumer_ImplBase implements CasObjectProc
         throw new ResourceProcessException(e);
       }
     }
-    
+    try {
+		shangqingfileWriter.flush();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
     
   }
 
